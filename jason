@@ -7,3 +7,8 @@ data = [
 with open('data.json', 'w', newline ="") as file:
     json.dump(data, file)
 
+
+with open('data.json', 'r') as file:
+    data = json.load(file)
+    for row in data:
+        print(row)
