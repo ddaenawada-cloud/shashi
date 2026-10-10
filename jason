@@ -1,0 +1,9 @@
+import json
+data = [
+    { "Name": "Shekhar","Age": 25,"City": "New York"},
+    { "Name": "John","Age": 30,"City": "Los Angeles"},
+    { "Name": "Alice","Age": 28,"City": "Chicago"}
+]
+with open('data.json', 'w', newline ="") as file:
+    json.dump(data, file)
+
