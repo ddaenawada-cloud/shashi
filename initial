@@ -1,3 +1,5 @@
+import csv
+
 print("SHEKHAR")
 print ("my name is SHEKHAR")
 print("I am learning Python programming")
@@ -7,3 +9,24 @@ print("I am learning python and sql programing")
 print("I am learning python ,sql and git programming")
 print("I am learning python ,sql, github and git programming")
 print("I am learning python ,sql, github, git and linux programming")
+
+
+import csv
+with open("data.csv", "w", newline="") as file:
+    writer = csv.writer(file)
+    writer.writerow(["Name", "Age", "City"])
+    writer.writerow(["Shekhar", 25, "New York"])
+    writer.writerow(["John", 30, "Los Angeles"])
+    writer.writerow(["Alice", 28, "Chicago"])
+
+
+with open('data.csv',mode='r') as file:
+    reader = csv.reader(file)
+    for row in reader:
+        print(row)
+
+        
+with open('data.csv', mode='r', newline='') as file:
+    reader = csv.DictReader(file)
+    for row in reader:
+        print(row)
